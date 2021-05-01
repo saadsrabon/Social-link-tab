@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Googlefont -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Social Media Tab</title>
+</head>
+
+<body>
+    <!-- Heading Of the box -->
+    <div class="heading"><h2>Connect With My Thoughts </h2></div>
+    <div class="container">
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="image-box " data-id="content-1">
+                <img src="images/png-transparent-facebook-f8-business-advertising-company-name-blue-company-text.png"
+                    alt="" >
+            </div>
+            <div class="image-box" data-id="content-2">
+                <img src="images/md_5b37de3bde2d6.png" alt="" >
+            </div>
+            <div class="image-box" data-id="content-3">
+                <img src="images/1200px-LinkedIn_Logo.svg.png" alt="" >
+            </div>
+            <div class="image-box" data-id="content-4">
+                <img src="images/github_PNG65.png" alt="" >
+            </div>
+        </div>
+        <!-- Social Media Content -->
+        <div class="content">
+            <div class="content-box active" id="content-1">
+                <img src="images/Saad-Srabon-Facebook.png" alt="">
+            </div>
+            <div class="content-box" id="content-2">
+                <img src="images/Saad-Srabon-saadsrabon-•-Instagram-photos-and-videos.png" alt="">
+            </div>
+            <div class="content-box" id="content-3">
+                <img src="images/Abul-Hasnat-Saad-LinkedIn.png" alt="">
+            </div>
+            <div class="content-box" id="content-4">
+                <img src="images/saadsrabon-Saad-Srabon-.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scrpipts -->
+    <script type="">
+        var imageBox = document.querySelectorAll('.image-box');
+        var contentBox =document.querySelectorAll('.content-box');
+
+        for (var i=0; i<imageBox.length; i++){
+            imageBox[i].addEventListener('mouseover', function(){
+                for (var i=0; i<contentBox.length; i++){
+                    contentBox[i].className='content-box';
+                }
+                document.getElementById(this.dataset.id).className='content-box active';
+                
+            })
+        }
+    </script>
+</body>
+
+</html>
